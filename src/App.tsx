@@ -3,7 +3,6 @@
 import {
   ArrowRight,
   BarChart3,
-  Check,
   ChevronRight,
   CircleDollarSign,
   Command,
@@ -109,11 +108,11 @@ const testimonials = [
 function App() {
   return (
     <main className="dark min-h-screen bg-background text-foreground">
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_68%_8%,rgba(37,99,235,0.18),transparent_30%),radial-gradient(circle_at_18%_18%,rgba(16,185,129,0.14),transparent_28%)]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_72%_8%,rgba(59,130,246,0.16),transparent_32%),radial-gradient(circle_at_12%_18%,rgba(148,163,184,0.08),transparent_26%)]" />
       <div className="relative mx-auto flex min-h-screen w-full max-w-[1500px]">
         <aside className="hidden min-h-screen w-72 border-r bg-sidebar/80 px-4 py-5 backdrop-blur-xl lg:block">
           <div className="flex items-center gap-3 px-2">
-            <div className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg shadow-primary/20">
+            <div className="flex size-10 items-center justify-center rounded-lg border bg-background text-foreground shadow-sm">
               <Sparkles className="size-5" />
             </div>
             <div>
@@ -135,7 +134,7 @@ function App() {
                 href="#"
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition ${
                   item.active
-                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/15"
+                    ? "bg-foreground text-background shadow-sm"
                     : "text-muted-foreground hover:bg-sidebar-accent hover:text-foreground"
                 }`}
               >
@@ -167,7 +166,7 @@ function App() {
           <header className="sticky top-0 z-20 border-b bg-background/82 backdrop-blur-xl">
             <div className="flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
               <div className="flex items-center gap-3 lg:hidden">
-                <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                <div className="flex size-9 items-center justify-center rounded-lg border bg-background text-foreground">
                   <Sparkles className="size-4" />
                 </div>
                 <span className="text-sm font-semibold">Northstar</span>
@@ -195,11 +194,11 @@ function App() {
             <section className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
               <div className="flex min-h-[520px] flex-col justify-between rounded-xl border bg-card/72 p-6 shadow-2xl shadow-black/20 backdrop-blur xl:p-8">
                 <div>
-                  <Badge className="mb-6 bg-primary/15 text-primary hover:bg-primary/15">
+                  <Badge className="mb-6 border border-blue-500/20 bg-blue-500/10 text-blue-200 hover:bg-blue-500/10">
                     <Sparkles className="mr-1 size-3.5" />
                     Dark premium shadcn blocks
                   </Badge>
-                  <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-normal text-foreground sm:text-6xl xl:text-7xl">
+                  <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-normal text-foreground sm:text-5xl xl:text-6xl">
                     Landing que se siente como un producto SaaS de alto nivel.
                   </h1>
                   <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
@@ -240,12 +239,12 @@ function App() {
                             <p className="text-sm text-muted-foreground">{metric.label}</p>
                             <p className="mt-2 text-3xl font-semibold">{metric.value}</p>
                           </div>
-                          <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                          <div className="flex size-10 items-center justify-center rounded-lg border bg-background text-blue-300">
                             <metric.icon className="size-5" />
                           </div>
                         </div>
                         <div className="mt-5 flex items-center justify-between text-sm">
-                          <span className="font-medium text-emerald-400">{metric.change}</span>
+                          <span className="font-medium text-blue-300">{metric.change}</span>
                           <span className="text-muted-foreground">{metric.note}</span>
                         </div>
                       </CardContent>
@@ -357,12 +356,12 @@ function App() {
                 {testimonials.map((testimonial) => (
                   <Card key={testimonial.name} className="bg-card/72 shadow-xl shadow-black/10">
                     <CardContent className="p-6">
-                      <div className="flex gap-1 text-primary">
+                      <div className="flex gap-1 text-blue-300">
                         {Array.from({ length: 5 }).map((_, index) => (
                           <Star key={index} className="size-4 fill-current" />
                         ))}
                       </div>
-                      <p className="mt-5 leading-7 text-muted-foreground">“{testimonial.quote}”</p>
+                      <p className="mt-5 leading-7 text-muted-foreground">"{testimonial.quote}"</p>
                       <Separator className="my-5" />
                       <div className="flex items-center gap-3">
                         <Avatar>
@@ -380,10 +379,10 @@ function App() {
               </div>
             </section>
 
-            <section className="mt-6 rounded-xl border bg-primary p-6 text-primary-foreground shadow-2xl shadow-primary/15 sm:p-8">
+            <section className="mt-6 rounded-xl border bg-foreground p-6 text-background shadow-2xl shadow-black/20 sm:p-8">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-2xl">
-                  <Badge className="bg-white/18 text-white hover:bg-white/18">
+                  <Badge className="border-black/10 bg-black/10 text-background hover:bg-black/10">
                     <ShieldCheck className="mr-1 size-3.5" />
                     Deploy listo en Vercel
                   </Badge>
