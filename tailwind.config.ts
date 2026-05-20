@@ -12,7 +12,13 @@ const config = {
   		}
   	},
   	extend: {
-  		colors: {
+  			colors: {
+  			innova: {
+  				blue: '#1C6DB5',
+  				gray: '#878787',
+  				black: '#1D1D1B',
+  				white: '#FFFFFF'
+  			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
